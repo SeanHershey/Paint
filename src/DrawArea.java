@@ -1,11 +1,12 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.awt.event.MouseMotionListener;
 import java.util.Stack;
-import java.awt.event.ActionListener;
-import java.awt.event.MouseEvent;
-import java.awt.event.ActionEvent;
+
 
 public class DrawArea extends JPanel implements MouseListener, MouseMotionListener, ActionListener
 {
@@ -43,7 +44,7 @@ public class DrawArea extends JPanel implements MouseListener, MouseMotionListen
             }
             else if (App.shape.equals("Circle"))
             {
-                s.push(new Circle(x1, y1, (x2-x1) * 2, (y2-y1) * 2, App.color));
+                s.push(new Circle(x1, y1, (x2-x1), (y2-y1), App.color));
             }
             else if (App.shape.equals("Arc"))
             {

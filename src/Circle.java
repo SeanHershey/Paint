@@ -54,6 +54,6 @@ class Circle implements MyShape
 
     public void paint(Graphics g)
     {
-        g.fillOval(xPos, yPos, Math.min(width,height), Math.min(width,height));
+        g.fillOval(xPos, yPos, Math.max(width,height), Math.max(width,height));
     }
 }
